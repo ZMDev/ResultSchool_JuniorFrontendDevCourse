@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Apply JavaScript example</title>
+
+  <!-- Here is right way - place the script at the end!
+  Note: The reason the above instructions place the <script> element near the bottom of the HTML file is that the browser reads code in the order it appears in the file.
+  If the JavaScript loads first and it is supposed to affect the HTML that hasn't loaded yet, there could be problems. Placing JavaScript near the bottom of an HTML page is one way to accommodate this dependency. -->
+
+
+</head>
+
+<body>
+
+    <button>Click me</button>
+
+    <script>
+
+        // здесь будет JavaScript
+        document.addEventListener("DOMContentLoaded", function () {
+          function createParagraph() {
+            let para = document.createElement('p');
+            para.textContent = 'You clicked the button!';
+            document.body.appendChild(para);
+          }
+    
+          const buttons = document.querySelectorAll('button');
+    
+          for (let i = 0; i < buttons.length; i++) {
+            buttons[i].addEventListener('click', createParagraph);
+          }
+        });
+    
+      </script>
+      
+</body>
+
+</html>
