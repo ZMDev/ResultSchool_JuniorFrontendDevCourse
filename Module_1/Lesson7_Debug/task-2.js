@@ -1,4 +1,4 @@
-// String Hometask #7.2
+// Debug Hometask #7.2
 
 // 1) Использую оба варианта отладки c console.log и debugger
 
