@@ -1,0 +1,41 @@
+# For https://codepen.io/mick4dev/pens/public
+
+Module1_JS-BASE_Lesson9_Task6
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 1. JavaScript - Array</title>
+</head>
+<body>
+  <h2>Lesson 9, HomeTask #9.6</h2>
+</body>
+</html>
+
+#Telemost on February 26 2025
+https://disk.yandex.ru/i/67GBJsq692EBqA
+
+#Telemost on March 01 2025
+https://disk.yandex.ru/i/AdpUnqJCJmKtHg
+
+#Telemost on March 09 2025
+https://disk.yandex.ru/i/15DGpwOImDeKkw
+
+"var, let, const: ПОЛНЫЙ КУРС [2023] | Объявление переменных в JS"
+https://www.youtube.com/watch?v=07FllcTRj84&ab_channel=PomazkovJS
+
+
+#Telemost on March 16 2025
+https://disk.yandex.ru/i/UJsgGhi0PtG9Dg
+
+"ЗАМЫКАНИЯ В JS за 15 минут: ОТ и ДО | Что такое лексическое окружение и как связано с замыканием?"
+https://www.youtube.com/watch?v=mI6Jcfsgma4&ab_channel=PomazkovJS
+
+"Замыкания, функции изнутри
+В этой главе мы продолжим рассматривать, как работают переменные, и, как следствие, познакомимся с замыканиями. "
+https://learn.javascript.ru/closures#vozvrat-funktsii
+
+
