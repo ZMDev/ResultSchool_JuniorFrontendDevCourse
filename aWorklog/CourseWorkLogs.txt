@@ -38,4 +38,9 @@ https://www.youtube.com/watch?v=mI6Jcfsgma4&ab_channel=PomazkovJS
 В этой главе мы продолжим рассматривать, как работают переменные, и, как следствие, познакомимся с замыканиями. "
 https://learn.javascript.ru/closures#vozvrat-funktsii
 
+#Telemost on March 23 2025
+https://telemost.yandex.ru/j/49845073678042
+
+https://disk.yandex.ru/i/B6NNE-cprEn-sg
+
 
