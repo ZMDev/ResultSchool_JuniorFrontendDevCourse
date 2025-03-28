@@ -31,30 +31,17 @@ const users = [
     }
 ];
 
-let onlineUsers = [];
+// let onlineUsers = [];
 
-console.log('users.length', users.length);
-console.log('users', users);
-console.log('onlineUsers', onlineUsers);
-console.log('onlineUsers.length', onlineUsers.length);
+// for (let i = 0; i < users.length; i++) {
+//     if (users[i].status === 'online') {
+//         onlineUsers.push(users[i]);
+//     };
+// };
+// console.log('End of cycle');
+// console.log('onlineUsers = ',onlineUsers);
 
-let indexOfNewObject = 0;
-for (let i = 0; i < users.length; i++) {
-    console.log('users[i]', users[i]);
-    if (users[i].status === 'online') {
-        onlineUsers[indexOfNewObject] = {username: users[i].username, status: users[i].status, lastActivity: users[i].lastActivity};
-        console.log('indexOfNewObject', indexOfNewObject);
-        console.log('onlineUsers[indexOfNewObject]', onlineUsers[indexOfNewObject]);
-        console.log('onlineUsers.lenght',onlineUsers.length);
-        indexOfNewObject++;
-    };
-};
-console.log('End of cycle');
+let onlineUsers = users.filter(user => user.status === 'online');
 
-console.log('indexOfNewObject', indexOfNewObject);
-console.log('users', users);
-console.log('onlineUsers.length', onlineUsers.length,'onlineUsers', onlineUsers);
-
-let usersOnlineNames = onlineUsers.filter(item => {return item[0]});
-
-alert(`Сейчас в онлайн следующие пользователи: ${usersOnlineNames}`);
+console.log(`Сейчас в онлайн следующие пользователи: ${onlineUsers.map(user => user.username)}`);
+// alert(`Сейчас в онлайн следующие пользователи: ${onlineUsers.map(user => user.username)}`);

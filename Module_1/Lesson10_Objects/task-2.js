@@ -29,7 +29,11 @@ console.log('result', result);
 */
 
 function giveTalonsInOrder(patients, orders) {
-
+   const orderedQueue = [];
+   for (let i = 0; i < orders.length; i++) {
+      orderedQueue.push(patients.find(person => person.id === orders[i]));
+   };
+   return orderedQueue;
 }
 
 const ordersArr = [4, 2, 1, 3];
@@ -39,6 +43,6 @@ const people = [
    { id: 3, name: "Ангелина" },
    { id: 4, name: "Виталий" },
 ];
- 
+
 const result = giveTalonsInOrder(people, ordersArr);
-console.log('result', result);
+console.log('Queue result', result);
