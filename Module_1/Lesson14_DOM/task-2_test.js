@@ -51,6 +51,7 @@ const tasks = [
 Используйте их для разработки логики приложения.
 */
 
+// Массив задач
 const tasks = [
     {
         id: '1138465078061',
@@ -69,63 +70,72 @@ const tasks = [
     },
 ];
 
-const tasksListDiv = document.querySelector('.tasks-list');
-// Debug print
-// console.log(tasksListDiv);
+// Функция рендеринга всех задач
+function renderTasks() {
+    const listElement = document.querySelector('.tasks-list');
+    
+    // Очищаем список перед добавлением новых элементов
+    while(listElement.firstChild){
+        listElement.removeChild(listElement.lastChild);
+    }
+    
+    // Проходим по каждому объекту задачи и создаем соответствующий HTML
+    tasks.forEach(task => {
+        const taskItemDiv = createTaskItem(task);  
+        listElement.appendChild(taskItemDiv);
+    });
+}
 
-function createTaskElement(taskData) {
-    // Create div class="task-item"
+// Создание отдельного элемента задачи
+function createTaskItem(task) {
+    // Создаем div.task-item
     let taskItemDiv = document.createElement('div');
     taskItemDiv.classList.add('task-item');
-    taskItemDiv.dataset.taskId = taskData.id;
+    taskItemDiv.dataset.taskId = task.id;
 
-    // Create div class="task-item__main-container"
+    // Создаем контейнер main-container
     let mainContainerDiv = document.createElement('div');
     mainContainerDiv.classList.add('task-item__main-container');
 
-    // Create div class="task-item__main-content"
+    // Контейнер content
     let mainContentDiv = document.createElement('div');
     mainContentDiv.classList.add('task-item__main-content');
 
-    // Create form class="checkbox-form"
+    // Форма checkbox
     let formElement = document.createElement('form');
     formElement.classList.add('checkbox-form');
 
-    // Create input class="checkbox-form__checkbox"
+    // Чекбокс
     let checkboxInput = document.createElement('input');
     checkboxInput.type = 'checkbox';
     checkboxInput.classList.add('checkbox-form__checkbox');
-    checkboxInput.id = `task-${taskData.id}`;
-    if (taskData.completed) {
-        checkboxInput.checked = true;
+    checkboxInput.id = `task-${task.id}`;
+    if (task.completed) { 
+        checkboxInput.checked = true; 
     }
 
-    // Create label for="task-1"
+    // Label
     let labelElement = document.createElement('label');
-    labelElement.htmlFor = `task-${taskData.id}`;
+    labelElement.htmlFor = `task-${task.id}`;
 
-    // Create span class="task-item__text"
+    // Текст задачи
     let spanText = document.createElement('span');
     spanText.classList.add('task-item__text');
-    spanText.textContent = taskData.text;
+    spanText.textContent = task.text;
 
-    // Create button class="task-item__delete-button"
+    // Кнопка удаления
     let buttonDelete = document.createElement('button');
     buttonDelete.classList.add('task-item__delete-button', 'default-button', 'delete-button');
     buttonDelete.textContent = 'Удалить';
 
-    // Build Task Element
+    // Собираем структуру
     formElement.append(checkboxInput, labelElement);
     mainContentDiv.append(formElement, spanText);
     mainContainerDiv.append(mainContentDiv, buttonDelete);
     taskItemDiv.appendChild(mainContainerDiv);
 
     return taskItemDiv;
-};
+}
 
-// Create task list from array
-tasks.forEach(task => {
-    const taskDivElement = createTaskElement(task);
-    tasksListDiv.appendChild(taskDivElement);
-});
-
+// Отображаем задачи сразу же
+renderTasks();

@@ -1,13 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Result School</title>
-    <!-- <script src="task-2.js" defer></script> -->
+    <link rel="stylesheet" href="index.css" />
+    <script src="task-2.js" defer></script>
+
 <body>
     <h2>Module 1. Lesson 14 JavaScript DOM</h2>
     <br>
     <h3>HomeTask 14.2</h3>
+
+    <div id="tasks">
+        <div class="tasks__wrapper">
+            <form class="create-task-block">
+                <input name="taskName" class="create-task-block__input default-text-input" type="text"
+                    placeholder="Создайте новую задачу" value="Посмотреть урок по JavaScript">
+                <button type="submit" class="create-task-block__button default-button">
+                    Создать
+                </button>
+            </form>
+            <div class="tasks-list"></div>
+        </div>
+    </div>
+
 </body>
+
 </html>
